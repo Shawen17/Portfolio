@@ -147,3 +147,26 @@ export const ProjectData = [
     github: ["https://github.com/shawen17/greenhouse"],
   },
 ];
+
+export const services = [
+  {
+    id: 1,
+    icon: <i className="pi pi-database" style={{ fontSize: "2.5rem" }}></i>,
+    title: "Backend Development",
+    description:
+      "Developing Backend models, data structure, logic, optimization, and RESTAPI",
+  },
+  {
+    id: 2,
+    icon: <i className="pi pi-desktop" style={{ fontSize: "2.5rem" }}></i>,
+    title: "Frontend Development",
+    description: "Giving you that aethestics and feel with a fast load time",
+  },
+  {
+    id: 3,
+    icon: <i className="pi pi-server" style={{ fontSize: "2.5rem" }}></i>,
+    title: "FullStack Development",
+    description:
+      "Integrating the frontend and backend with APIs and deploying applications on Cloud",
+  },
+];

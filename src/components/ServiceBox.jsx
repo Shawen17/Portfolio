@@ -25,6 +25,7 @@ const Container = styled.div`
   margin: 10px;
   background-color: black;
   font-family: "Bricolage Grotesque", sans-serif;
+  cursor: pointer;
 
   &:hover {
     background-color: rgba(255, 40, 0, 0.5);
@@ -34,12 +35,10 @@ const Container = styled.div`
   }
 `;
 
-const ServiceBox = ({ title, description, width }) => {
+const ServiceBox = ({ title, description, width, icon }) => {
   return (
     <Container width={width}>
-      <Icon>
-        <i className="pi pi-database" style={{ fontSize: "2.5rem" }}></i>
-      </Icon>
+      <Icon>{icon}</Icon>
       <Title>{title}</Title>
       <Desc>{description}</Desc>
     </Container>
