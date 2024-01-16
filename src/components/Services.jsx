@@ -1,8 +1,6 @@
-import { useState } from "react";
 import styled from "styled-components";
 import ServiceBox from "./ServiceBox";
 import { services } from "../data/ProjectData";
-import { motion, AnimatePresence } from "framer-motion";
 
 const Container = styled.div`
   margin: 20px 10px 10px 30px;
@@ -23,19 +21,24 @@ const Title = styled.h1`
   margin-bottom: 20px;
 `;
 
-const SubTitle = styled.p`
+const SubTitle = styled.div`
   font-size: 18px;
   font-family: sans-serif;
   color: rgba(255, 255, 255, 0.5);
   word-break: break-word;
-  width: 60%;
-  text-align: center;
+  width: 600px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
+
+  @media screen and (max-width: 568px) {
+    width: 100%;
+  }
 `;
 
 const Services = () => {
-  const [selectedId, setSelectedId] = useState(null);
-
   return (
     <Container>
       <Title>My Awesome Expertise</Title>
@@ -45,32 +48,14 @@ const Services = () => {
       </SubTitle>
       <Main>
         {services.map((item) => (
-          <motion.div
+          <ServiceBox
             key={item.id}
-            layoutId={item.id}
-            onClick={() => setSelectedId(item.id)}
-          >
-            <ServiceBox
-              width={29}
-              icon={item.icon}
-              title={item.title}
-              description={item.description}
-            />
-          </motion.div>
+            width={31}
+            icon={item.icon}
+            title={item.title}
+            description={item.description}
+          />
         ))}
-        <AnimatePresence>
-          {selectedId && (
-            <motion.div layoutId={selectedId}>
-              <ServiceBox
-                width={29}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
-              <motion.button onClick={() => setSelectedId(null)} />
-            </motion.div>
-          )}
-        </AnimatePresence>
       </Main>
     </Container>
   );

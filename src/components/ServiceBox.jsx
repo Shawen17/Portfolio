@@ -28,10 +28,18 @@ const Container = styled.div`
   cursor: pointer;
 
   &:hover {
-    background-color: rgba(255, 40, 0, 0.5);
+    background: linear-gradient(
+      to right,
+      rgba(255, 40, 0, 0.5),
+      rgba(248, 131, 121, 0.6)
+    );
     ${Icon} {
       color: white;
     }
+  }
+
+  @media screen and (max-width: 568px) {
+    width: 100%;
   }
 `;
 

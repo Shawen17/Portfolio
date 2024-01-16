@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import styled from "styled-components";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+// import { motion, useAnimation } from "framer-motion";
+// import { useInView } from "react-intersection-observer";
 
 const ProjectBody = styled.div`
   width: 100%;
@@ -11,7 +11,7 @@ const ProjectBody = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 80px 20px 20px 20px;
+  padding: 80px 20px;
   z-index: 3;
   color: white;
 `;
@@ -28,16 +28,19 @@ const Container = styled.div`
     transform: scale(1.1);
     ${ProjectBody} {
       background-color: rgba(255, 40, 0, 0.2);
-      height: 80%;
+      width: 100%;
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 568px) {
     width: 100%;
   }
 `;
 
 const ProjectTitle = styled.p`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   font-weight: bold;
   text-align: center;
@@ -46,10 +49,13 @@ const ProjectTitle = styled.p`
 `;
 
 const ProjectDesc = styled.h3`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   word-break: break-word;
   width: 70%;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 `;
 
 const ProjectButton = styled.button`
@@ -70,36 +76,36 @@ const Project = ({
   projectDescription,
   width,
 }) => {
-  const control = useAnimation();
-  const [ref, inView] = useInView();
+  // const control = useAnimation();
+  // const [ref, inView] = useInView();
 
-  const boxVariant = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-    hidden: { opacity: 0, scale: 0 },
-  };
+  // const boxVariant = {
+  //   visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+  //   hidden: { opacity: 0, scale: 0 },
+  // };
 
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     control.start("visible");
+  //   } else {
+  //     control.start("hidden");
+  //   }
+  // }, [control, inView]);
 
   return (
     <Container backgroundImage={backgroundImage} width={width}>
-      <motion.div
+      {/* <motion.div
         ref={ref}
         variants={boxVariant}
         initial="hidden"
         animate={control}
-      >
-        <ProjectBody>
-          <ProjectTitle>{projectTitle}</ProjectTitle>
-          <ProjectDesc>{projectDescription}</ProjectDesc>
-          <ProjectButton>view details</ProjectButton>
-        </ProjectBody>
-      </motion.div>
+      > */}
+      <ProjectBody>
+        <ProjectTitle>{projectTitle}</ProjectTitle>
+        <ProjectDesc>{projectDescription}</ProjectDesc>
+        <ProjectButton>view details</ProjectButton>
+      </ProjectBody>
+      {/* </motion.div> */}
     </Container>
   );
 };

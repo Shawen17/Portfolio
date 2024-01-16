@@ -8,7 +8,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-around;
   padding: 10px;
-  margin-top: 40px;
+  margin-top: 40px 0px 40px 0px;
   box-sizing: border-box;
 `;
 
@@ -21,7 +21,7 @@ const Heading = styled.h2`
   margin: 20px;
 
   &: hover {
-    text-decoration: 2px underline black;
+    text-decoration: 2px underline white;
   }
 `;
 
