@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+.no-bullets ul {
+  list-style-type: none;
+  margin-left: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.no-bullets li:hover {
+  background-color: #eee;
+  color: #126180;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navigation-menu ul {
   display: flex;
-  flex-direction: column;
+  padding: 0;
+}
+.navigation-menu li {
+  list-style-type: none;
+  margin: 0 1rem;
+  /* color: black; */
+}
+
+.navigation-menu li:hover {
+  color: #126180;
+}
+
+.navigation-menu li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+  transform: translateY(-50%);
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+.menu-appear {
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 648px) {
+  .nav-link {
+    color: black;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 14px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hamburger {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  .menu-appear {
+    width: 95vw;
+    display: block;
+    background-color: whitesmoke;
+    text-align: left;
+    padding: 3px;
+  }
+  .navigation-menu {
+    display: none;
+  }
+
+  .navigation-menu ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: whitesmoke;
+    border-top: 1px solid black;
+  }
+  .navigation-menu li {
+    text-align: center;
+    margin: 0;
+  }
+  .navigation-menu li a {
+    /* color: black; */
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+  .navigation-menu li:hover {
+    background-color: #eee;
   }
 }

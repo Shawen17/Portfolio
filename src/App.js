@@ -1,14 +1,17 @@
 import "./App.css";
-import Projects from "./components/Projects";
 import Layout from "./hoc/Layout";
-import Services from "./components/Services";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <Layout>
-      <Services />
-      <Projects />
-    </Layout>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
