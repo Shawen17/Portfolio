@@ -25,7 +25,7 @@ export const ProjectData = [
       "linux",
     ],
     details:
-      "Opening artisans with endless service opportunities and giving real-estate agents to have admin rights to upload and manage properties and bookings through a subscription pacakage.",
+      "Empowering artisans with limitless service opportunities and granting real estate agents administrative rights to upload and oversee properties and bookings through a subscription package.",
     link: "www.wearehere.ng",
     github: [],
     images: [
@@ -60,7 +60,7 @@ export const ProjectData = [
       "linux",
     ],
     details:
-      "An e-commerce app which inventory tracking and product variant management for merchants, with illustrations of how each product work before proceeding to order.",
+      "An e-commerce application designed to empower merchants with efficient inventory tracking and seamless product variant management. The app provides detailed illustrations of each product, offering users a comprehensive understanding before making a purchase.",
     link: "https://www.beemathworld.ng",
     github: [],
     images: [
@@ -86,7 +86,7 @@ export const ProjectData = [
       "Git",
     ],
     details:
-      "Bridging societal gap with a platform where gift items from fortunate members of the society can be picked up for free! ",
+      "Fostering social connections through a platform that facilitates the free exchange of gift items from generous individuals. Our integrated payment gateway covers delivery costs, and our operational logic ensures that each order, limited to four items, can include only one premium gift. Additionally, users are restricted from placing more than one order within a 3-day period.",
     link: "www.dashme.ng",
     github: ["https://github.com/shawen17/Dashme"],
     images: [
@@ -112,7 +112,7 @@ export const ProjectData = [
       "Git",
     ],
     details:
-      "Order your sumptuous parfait, dessert and also book service for your events",
+      "Place an order for your delectable parfait and desserts, and also reserve services for your events.",
     link: "www.scrummydessert.com.ng",
     github: ["https://github.com/shawen17/scrummydessert"],
     images: [
@@ -139,9 +139,10 @@ export const ProjectData = [
       "CI/CD",
       "RestAPI",
     ],
-    details: "Admin portal for a loan as a service application",
+    details:
+      "Administrative portal designed for a loan-as-a-service application, providing access to comprehensive user details and allowing functions such as filtering, activation, and blacklisting of users.",
     link: "https://oluwaseun-johnson-lendsqr-fe-test.netlify.app",
-    github: ["https://github.com/shawen17/lendsqr-fe-test"],
+    github: ["https://github.com/shawen17/lendsqr"],
     images: [
       "/projectimage/lend1.png",
       "/projectimage/lend2.png",
@@ -166,7 +167,7 @@ export const ProjectData = [
       "CI/CD",
     ],
     details:
-      "product and product details page of an e-commerce site with scroll, click and page transistion effect, with a mobile first approach",
+      "As a team member, I contributed to the development of the product and product details pages for an e-commerce website. The pages feature scroll, click, and page transition effects, with a focus on a mobile-first approach.",
     link: "https://teal-frangipane-00d1ed.netlify.app",
     github: ["https://github.com/shawen17/greenhouse"],
     images: [
@@ -184,13 +185,14 @@ export const services = [
     icon: <i className="pi pi-database" style={{ fontSize: "2.5rem" }}></i>,
     title: "Backend Development",
     description:
-      "Developing Backend models, data structure, logic, optimization, and RESTAPI",
+      "Creating backend models, designing data structures, implementing logic, optimizing performance, and building RESTful APIs.",
   },
   {
     id: 2,
     icon: <i className="pi pi-desktop" style={{ fontSize: "2.5rem" }}></i>,
     title: "Frontend Development",
-    description: "Giving you that aethestics and feel with a fast load time",
+    description:
+      "Designing visually engaging and intuitive interfaces that prioritize swift loading.",
   },
   {
     id: 3,
