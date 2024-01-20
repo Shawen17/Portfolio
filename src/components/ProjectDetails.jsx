@@ -91,7 +91,6 @@ const Details = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
   padding: 30px 80px 20px 80px;
   font-size: 14px;
 
