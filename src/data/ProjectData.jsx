@@ -98,7 +98,7 @@ export const ProjectData = [
   },
   {
     id: 4,
-    theme: "/img/theme4.jpg",
+    theme: "/projectimage/scrummy1.png",
     title: "ScrummyDessert",
     desc: "Your taste-buds can't get enough",
     stack: [
