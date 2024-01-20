@@ -31,13 +31,7 @@ const Projects = () => {
       <Heading>Recent Projects</Heading>
       <Container>
         {ProjectData.map((item) => (
-          <Project
-            width={29}
-            key={item.id}
-            backgroundImage={item.theme}
-            projectTitle={item.title}
-            projectDescription={item.desc}
-          />
+          <Project width={29} key={item.id} item={item} />
         ))}
       </Container>
     </>

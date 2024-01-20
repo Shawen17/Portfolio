@@ -27,9 +27,12 @@ export const ProjectData = [
     details:
       "Opening artisans with endless service opportunities and giving real-estate agents to have admin rights to upload and manage properties and bookings through a subscription pacakage.",
     link: "www.wearehere.ng",
-    github: [
-      "https://github.com/shawen17/WeAreHere-Frontend",
-      "https://github.com/shawen17/WeAreHere-Backend",
+    github: [],
+    images: [
+      "/projectimage/wearehere1.png",
+      "/projectimage/wearehere2.png",
+      "/projectimage/wearehere3.png",
+      "/projectimage/wearehere4.png",
     ],
   },
   {
@@ -57,11 +60,14 @@ export const ProjectData = [
       "linux",
     ],
     details:
-      "shop online for that easy life gadget with illustration of how it works",
-    link: "www.beemathworld.ng",
-    github: [
-      "https://github.com/shawen17/Beemathworld-Frontend",
-      "https://github.com/shawen17/Beemathworld-Backend",
+      "An e-commerce app which inventory tracking and product variant management for merchants, with illustrations of how each product work before proceeding to order.",
+    link: "https://www.beemathworld.ng",
+    github: [],
+    images: [
+      "/projectimage/beemath1.png",
+      "/projectimage/beemath2.png",
+      "/projectimage/beemath3.png",
+      "/projectimage/beemath4.png",
     ],
   },
   {
@@ -83,6 +89,12 @@ export const ProjectData = [
       "Bridging societal gap with a platform where gift items from fortunate members of the society can be picked up for free! ",
     link: "www.dashme.ng",
     github: ["https://github.com/shawen17/Dashme"],
+    images: [
+      "/projectimage/dashme1.png",
+      "/projectimage/dashme2.png",
+      "/projectimage/dashme3.png",
+      "/projectimage/dashme4.png",
+    ],
   },
   {
     id: 4,
@@ -103,6 +115,12 @@ export const ProjectData = [
       "Order your sumptuous parfait, dessert and also book service for your events",
     link: "www.scrummydessert.com.ng",
     github: ["https://github.com/shawen17/scrummydessert"],
+    images: [
+      "/projectimage/scrummy1.png",
+      "/projectimage/scrummy2.png",
+      "/projectimage/scrummy3.png",
+      "/projectimage/scrummy4.png",
+    ],
   },
   {
     id: 5,
@@ -124,6 +142,12 @@ export const ProjectData = [
     details: "Admin portal for a loan as a service application",
     link: "https://oluwaseun-johnson-lendsqr-fe-test.netlify.app",
     github: ["https://github.com/shawen17/lendsqr-fe-test"],
+    images: [
+      "/projectimage/lend1.png",
+      "/projectimage/lend2.png",
+      "/projectimage/lend3.png",
+      "/projectimage/lend4.png",
+    ],
   },
   {
     id: 6,
@@ -145,6 +169,12 @@ export const ProjectData = [
       "product and product details page of an e-commerce site with scroll, click and page transistion effect, with a mobile first approach",
     link: "https://teal-frangipane-00d1ed.netlify.app",
     github: ["https://github.com/shawen17/greenhouse"],
+    images: [
+      "/projectimage/green1.png",
+      "/projectimage/green2.png",
+      "/projectimage/green3.png",
+      "/projectimage/green4.png",
+    ],
   },
 ];
 

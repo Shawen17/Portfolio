@@ -1,7 +1,5 @@
-// import { useEffect } from "react";
 import styled from "styled-components";
-// import { motion, useAnimation } from "framer-motion";
-// import { useInView } from "react-intersection-observer";
+import { useNavigate } from "react-router-dom";
 
 const ProjectBody = styled.div`
   width: 100%;
@@ -17,12 +15,13 @@ const ProjectBody = styled.div`
 `;
 
 const Container = styled.div`
+  background-image: url(${(props) => props.backgroundimage});
   width: ${(props) => props.width}%;
   height: 500px;
   display: flex;
-  background-image: url(${(props) => props.backgroundImage});
   border-radius: 6px;
   margin: 20px;
+  background-size: cover; /* Optional: Adjust background-size as needed */
 
   &:hover {
     transform: scale(1.1);
@@ -70,42 +69,22 @@ const ProjectButton = styled.button`
   cursor: pointer;
 `;
 
-const Project = ({
-  backgroundImage,
-  projectTitle,
-  projectDescription,
-  width,
-}) => {
-  // const control = useAnimation();
-  // const [ref, inView] = useInView();
+const Project = ({ item, width }) => {
+  const navigate = useNavigate();
 
-  // const boxVariant = {
-  //   visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-  //   hidden: { opacity: 0, scale: 0 },
-  // };
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     control.start("visible");
-  //   } else {
-  //     control.start("hidden");
-  //   }
-  // }, [control, inView]);
+  const onButtonClick = () => {
+    navigate("/project-details", { state: item });
+  };
 
   return (
-    <Container backgroundImage={backgroundImage} width={width}>
-      {/* <motion.div
-        ref={ref}
-        variants={boxVariant}
-        initial="hidden"
-        animate={control}
-      > */}
+    <Container backgroundimage={item.theme} width={width}>
       <ProjectBody>
-        <ProjectTitle>{projectTitle}</ProjectTitle>
-        <ProjectDesc>{projectDescription}</ProjectDesc>
-        <ProjectButton>view details</ProjectButton>
+        <ProjectTitle>{item.title}</ProjectTitle>
+        <ProjectDesc>{item.desc}</ProjectDesc>
+        <ProjectButton onClick={() => onButtonClick()}>
+          view details
+        </ProjectButton>
       </ProjectBody>
-      {/* </motion.div> */}
     </Container>
   );
 };
