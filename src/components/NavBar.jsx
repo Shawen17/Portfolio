@@ -3,6 +3,7 @@ import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import ClickAwayListener from "react-click-away-listener";
 
 export const Nav = styled.nav`
   background: orangered;
@@ -25,6 +26,10 @@ export const NavLogo = styled(Link)`
 
   &:hover {
     color: teal;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-left: 20px;
   }
 `;
 
@@ -88,6 +93,7 @@ export const NavMenuCollapse = styled.div`
   top: 1px;
   left: 0;
   right: 0;
+  z-index: 12;
 
   @media screen and (max-width: 768px) {
     display: flex;
@@ -188,42 +194,49 @@ const Navbar = () => {
           </NavBtn>
         </NavMenu>
       </Nav>
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ rotate: 0, scale: 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 260,
-          damping: 20,
-        }}
-      >
-        <NavMenuCollapse style={{ display: clicked ? "block" : "none" }}>
-          <NavLink to="/about">About</NavLink>
+      {clicked && (
+        <ClickAwayListener onClickAway={() => setClicked(false)}>
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ rotate: 0, scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+            }}
+          >
+            <NavMenuCollapse style={{ display: clicked ? "block" : "none" }}>
+              <NavLink to="/about">About</NavLink>
 
-          <ExternalLink
-            href="https://www.github.com/shawen17"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="pi pi-github" style={{ fontSize: "1.5rem" }}></i>
-          </ExternalLink>
-          <ExternalLink
-            href="https://linkedin.com/in/oluwaseun-johnson-850a433b"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="pi pi-linkedin" style={{ fontSize: "1.5rem" }}></i>
-          </ExternalLink>
-          <NavBtn>
-            <NavBtnLink
-              href="/oluwaseun_fullstack_developer.pdf"
-              download="resume.pdf"
-            >
-              Resume
-            </NavBtnLink>
-          </NavBtn>
-        </NavMenuCollapse>
-      </motion.div>
+              <ExternalLink
+                href="https://www.github.com/shawen17"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="pi pi-github" style={{ fontSize: "1.5rem" }}></i>
+              </ExternalLink>
+              <ExternalLink
+                href="https://linkedin.com/in/oluwaseun-johnson-850a433b"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  className="pi pi-linkedin"
+                  style={{ fontSize: "1.5rem" }}
+                ></i>
+              </ExternalLink>
+              <NavBtn>
+                <NavBtnLink
+                  href="/oluwaseun_fullstack_developer.pdf"
+                  download="resume.pdf"
+                >
+                  Resume
+                </NavBtnLink>
+              </NavBtn>
+            </NavMenuCollapse>
+          </motion.div>
+        </ClickAwayListener>
+      )}
     </>
   );
 };
