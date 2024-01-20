@@ -128,7 +128,7 @@ const Back = styled.div`
   color: orangered;
   margin-left: 20px;
   position: fixed;
-  top: 110px;
+  top: 120px;
   left: 0;
   cursor: pointer;
   z-index: 12;
@@ -160,7 +160,7 @@ const ProjectDetails = () => {
       >
         <i
           className="pi pi-arrow-left"
-          style={{ fontSize: "2.0rem", color: "#0cafff" }}
+          style={{ fontSize: "2.0rem", color: "orangered" }}
         ></i>
       </Back>
       {project.images && (
