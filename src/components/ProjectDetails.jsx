@@ -125,12 +125,13 @@ const Stack = styled.div`
 `;
 
 const Back = styled.div`
-  color: #0cafff;
+  color: orangered;
   margin-left: 20px;
   position: fixed;
-  top: 100px;
+  top: 110px;
   left: 0;
   cursor: pointer;
+  z-index: 12;
 `;
 
 const ProjectDetails = () => {
