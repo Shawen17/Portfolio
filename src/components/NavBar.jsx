@@ -76,7 +76,7 @@ export const NavMenu = styled.div`
 `;
 
 export const NavMenuCollapse = styled.div`
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   margin-top: 90px;
@@ -84,6 +84,14 @@ export const NavMenuCollapse = styled.div`
   width: 100%;
   justify-content: center;
   background: orangered;
+  position: fixed;
+  top: 1px;
+  left: 0;
+  right: 0;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
 `;
 
 export const NavBtn = styled.nav`
@@ -155,7 +163,7 @@ const Navbar = () => {
 
         <NavMenu>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+
           <ExternalLink
             href="https://www.github.com/shawen17"
             target="_blank"
@@ -191,7 +199,7 @@ const Navbar = () => {
       >
         <NavMenuCollapse style={{ display: clicked ? "block" : "none" }}>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+
           <ExternalLink
             href="https://www.github.com/shawen17"
             target="_blank"
@@ -204,7 +212,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="pi pi-linkedin" style={{ fontSize: "2.0rem" }}></i>
+            <i className="pi pi-linkedin" style={{ fontSize: "1.5rem" }}></i>
           </ExternalLink>
           <NavBtn>
             <NavBtnLink

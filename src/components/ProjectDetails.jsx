@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Project.css";
 import styled from "styled-components";
 import { useState } from "react";
@@ -86,9 +86,19 @@ const Container = styled.div`
   }
 `;
 
-const Details = styled.p`
-  margin: 20px;
+const Details = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px 80px 20px 80px;
   font-size: 14px;
+
+  @media screen and (max-width: 568px) {
+    flex: 100%;
+    padding: 10px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -97,7 +107,12 @@ const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex: 60%;
+
+  @media screen and (max-width: 568px) {
+    flex: 100%;
+  }
 `;
 
 const Stack = styled.div`
@@ -110,10 +125,26 @@ const Stack = styled.div`
   margin: 5px;
 `;
 
+const Back = styled.div`
+  color: #0cafff;
+  margin-left: 20px;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  cursor: pointer;
+`;
+
 const ProjectDetails = () => {
   const location = useLocation();
   const project = location.state;
   const [sliderdata, setSliderdata] = useState(project.images[0]);
+  const navigate = useNavigate();
+
+  const backClick = () => {
+    navigate(-1);
+  };
+
+  document.title = "project details";
 
   const sliderClick = (index) => {
     setSliderdata(project.images[index]);
@@ -122,6 +153,16 @@ const ProjectDetails = () => {
   return (
     <div style={{ marginTop: 100 }}>
       <Title>{project.desc}</Title>
+      <Back
+        onClick={() => {
+          backClick();
+        }}
+      >
+        <i
+          className="pi pi-arrow-left"
+          style={{ fontSize: "2.0rem", color: "#0cafff" }}
+        ></i>
+      </Back>
       {project.images && (
         <Container>
           <MainImage src={sliderdata} alt="main" />
@@ -148,7 +189,9 @@ const ProjectDetails = () => {
         </ProjectLink>
       )}
 
-      <Details>{project.details}</Details>
+      <Details>
+        <p>{project.details}</p>
+      </Details>
       <Wrapper>
         {project.stack.map((stack, index) => (
           <Stack key={index}>{stack}</Stack>
