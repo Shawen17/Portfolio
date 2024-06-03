@@ -43,8 +43,10 @@ const Services = () => {
     <Container>
       <Title>My Awesome Expertise</Title>
       <SubTitle>
-        From Backend Structure and logic, Frontend aethestics development, to
-        deployment on Cloud. You are covered
+        Get the best from Backend Structure and logic, Frontend aethestics
+        development, building docker images, continious integration and
+        deployment through Jenkins pipeline, to deployment using AWS Cloud
+        services, you are covered.
       </SubTitle>
       <Main>
         {services.map((item) => (

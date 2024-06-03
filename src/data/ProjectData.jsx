@@ -138,6 +138,13 @@ export const ProjectData = [
       "Jest",
       "CI/CD",
       "RestAPI",
+      "Redux",
+      "Django",
+      "Python",
+      "AWS s3",
+      "AWS EC2",
+      "AWS RDS",
+      "MongoDB",
     ],
     details:
       "Administrative portal designed for a loan-as-a-service application, providing access to comprehensive user details and allowing functions such as filtering, activation, and blacklisting of users.",
@@ -177,6 +184,56 @@ export const ProjectData = [
       "/projectimage/green4.png",
     ],
   },
+  {
+    id: 7,
+    theme: "/img/jenkins.png",
+    title: "Container Pipeline",
+    desc: "continious development and deployment",
+    stack: [
+      "React",
+      "JavaScript",
+      "Styled-Components",
+      "Material-UI",
+      "HTML",
+      "CSS",
+      "Git",
+      "Jenkins",
+      "Docker",
+      "Redux",
+      "Redux-persist",
+    ],
+    details:
+      "A continious development and deployment pipeline for React and Django project. The Jenkins pipeline build docker images for the project, create tags and push the images to Github Registry(GHCR), then stop all running containers, delete the containers and their corresponding images, and finally run the containers from the latest version of the built images. So, just like every pipeline should behave, if a code is committed to git, the Jenkins circle starts all over again.",
+    link: "",
+    github: ["https://github.com/shawen17/boom-app"],
+    images: ["/projectimage/jenkins_2.png", "/projectimage/jenkins_1.png"],
+  },
+  {
+    id: 8,
+    theme: "/img/lambda.png",
+    title: "AWS Lambda Function",
+    desc: "Node.js development and deployment",
+    stack: [
+      "Node.js",
+      "JavaScript",
+      "Git",
+      "Jenkins",
+      "Docker",
+      "AWS s3",
+      "AWS SAM",
+      "AWS Lambda",
+      "MongoDB",
+    ],
+    details:
+      "An optimized backend developed with Express.js, serving as the API endpoint for a loan service application. Deployed with a CI/CD Jenkins pipeline to AWS Lambda via AWS SAM CLI and uses MongoDB as the database.",
+    link: "",
+    github: ["https://github.com/shawen17/aws-boom-backend-lambda"],
+    images: [
+      "/projectimage/lambda_1.png",
+      "/projectimage/lambda_2.png",
+      "/projectimage/lambda_3.png",
+    ],
+  },
 ];
 
 export const services = [
@@ -199,6 +256,6 @@ export const services = [
     icon: <i className="pi pi-server" style={{ fontSize: "2.5rem" }}></i>,
     title: "FullStack Development",
     description:
-      "Integrating the frontend and backend with APIs and deploying applications on Cloud",
+      "Integrating the frontend and backend with APIs with CI/CD approach using AWS Cloud services",
   },
 ];

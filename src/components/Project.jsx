@@ -21,7 +21,7 @@ const Container = styled.div`
   display: flex;
   border-radius: 6px;
   margin: 20px;
-  background-size: cover; /* Optional: Adjust background-size as needed */
+  background-size: cover;
 
   &:hover {
     transform: scale(1.1);

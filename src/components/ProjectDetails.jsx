@@ -180,9 +180,11 @@ const ProjectDetails = () => {
           </MiniContainer>
         </Container>
       )}
-      <ProjectLink href={project.link} target="_blank" rel="noreferrer">
-        live view
-      </ProjectLink>
+      {project.link && (
+        <ProjectLink href={project.link} target="_blank" rel="noreferrer">
+          live view
+        </ProjectLink>
+      )}
       {project.github.length > 0 && (
         <ProjectLink href={project.github} target="_blank" rel="noreferrer">
           Github repo
