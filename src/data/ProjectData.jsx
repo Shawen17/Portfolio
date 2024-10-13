@@ -34,6 +34,7 @@ export const ProjectData = [
       "/projectimage/wearehere3.png",
       "/projectimage/wearehere4.png",
     ],
+    themecolor: "white",
   },
   {
     id: 2,
@@ -69,6 +70,7 @@ export const ProjectData = [
       "/projectimage/beemath3.png",
       "/projectimage/beemath4.png",
     ],
+    themecolor: "white",
   },
   {
     id: 3,
@@ -95,6 +97,7 @@ export const ProjectData = [
       "/projectimage/dashme3.png",
       "/projectimage/dashme4.png",
     ],
+    themecolor: "white",
   },
   {
     id: 4,
@@ -121,6 +124,7 @@ export const ProjectData = [
       "/projectimage/scrummy3.png",
       "/projectimage/scrummy4.png",
     ],
+    themecolor: "white",
   },
   {
     id: 5,
@@ -156,6 +160,7 @@ export const ProjectData = [
       "/projectimage/lend3.png",
       "/projectimage/lend4.png",
     ],
+    themecolor: "white",
   },
   {
     id: 6,
@@ -183,6 +188,7 @@ export const ProjectData = [
       "/projectimage/green3.png",
       "/projectimage/green4.png",
     ],
+    themecolor: "white",
   },
   {
     id: 7,
@@ -207,6 +213,7 @@ export const ProjectData = [
     link: "",
     github: ["https://github.com/shawen17/boom-app"],
     images: ["/projectimage/jenkins_2.png", "/projectimage/jenkins_1.png"],
+    themecolor: "#1e90ff",
   },
   {
     id: 8,
@@ -233,6 +240,7 @@ export const ProjectData = [
       "/projectimage/lambda_2.png",
       "/projectimage/lambda_3.png",
     ],
+    themecolor: "white",
   },
   {
     id: 9,
@@ -261,6 +269,7 @@ export const ProjectData = [
       "/projectimage/shopify2.png",
       "/projectimage/shopify3.png",
     ],
+    themecolor: "black",
   },
   {
     id: 10,
@@ -293,6 +302,7 @@ export const ProjectData = [
       "/projectimage/logistics5.png",
       "/projectimage/logistics6.png",
     ],
+    themecolor: "#1e90ff",
   },
 ];
 

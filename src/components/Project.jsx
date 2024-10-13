@@ -10,8 +10,8 @@ const ProjectBody = styled.div`
   align-items: center;
   justify-content: center;
   padding: 80px 20px;
-  z-index: 3;
-  color: white;
+  z-index: 99;
+  color: ${(props) => props.color};
 `;
 
 const Container = styled.div`
@@ -22,6 +22,8 @@ const Container = styled.div`
   border-radius: 6px;
   margin: 20px;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
   &:hover {
     transform: scale(1.1);
@@ -65,11 +67,11 @@ const ProjectButton = styled.button`
   font-weight: bold;
   height: 40px;
   width: 120px;
-  color: white;
+  color: ${(props) => props.color};
   cursor: pointer;
 `;
 
-const Project = ({ item, width }) => {
+const Project = ({ item, width, color }) => {
   const navigate = useNavigate();
 
   const onButtonClick = () => {
@@ -78,10 +80,10 @@ const Project = ({ item, width }) => {
 
   return (
     <Container backgroundimage={item.theme} width={width}>
-      <ProjectBody>
+      <ProjectBody color={color}>
         <ProjectTitle>{item.title}</ProjectTitle>
         <ProjectDesc>{item.desc}</ProjectDesc>
-        <ProjectButton onClick={() => onButtonClick()}>
+        <ProjectButton color={color} onClick={() => onButtonClick()}>
           view details
         </ProjectButton>
       </ProjectBody>
