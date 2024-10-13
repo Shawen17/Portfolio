@@ -91,27 +91,24 @@ const About = () => {
 
       <Container>
         <Left>
-          A versatile full-stack developer with a robust telecommunications
-          background. My journey began as a Network Operation Engineer, where my
-          passion for task automation led to a significant accomplishment:
-          automating a 13-year manual fault alarm escalation process, resulting
-          in an 80% improvement in network availability. I extended my skills to
-          develop desktop applications and real-time analysis dashboards using
-          Python libraries such as Dash, Tkinter, Selenium, Pandas, and PyGUI.
-          As my proficiency in Python grew, I ventured into web development with
-          the Django Framework, contributing to various commercial and personal
-          projects. Notable among them are dashme.ng, a platform facilitating
-          the pickup of donated items, and missingperson.com.ng, a platform
-          aiding in the search for missing individuals and reuniting families.
-          Within the Django framework, I excelled in backend model development,
-          database query optimization, and REST API creation. To further enhance
-          my skill set, I delved into frontend development using React,
-          seamlessly integrating it with backend functionalities through APIs
-          and websockets. I have successfully led teams using Agile methodology,
-          employing containerization with Docker, implementing CI/CD tools like
-          Jenkins, conducting unit tests with Jest, and utilizing Git for
-          version control and collaborative development. My expertise extends to
-          deploying applications on cloud platforms.
+          I'm a dynamic full-stack developer with a powerhouse background in
+          telecommunications. My journey kicked off as a Network Operation
+          Engineer, where I took a 13-year-old manual fault alarm process and
+          automated it, boosting network availability by 80%. From there, I
+          dived into building desktop apps and real-time dashboards using Python
+          heavyweights like Dash, Tkinter, Selenium, and Pandas. As my Python
+          skills skyrocketed, I ventured into web development with Django,
+          making waves in projects like dashme.ng (helping donate items) and
+          missingperson.com.ng (connecting missing people with families). I'm a
+          backend wizard, crafting optimized database queries, REST APIs, and
+          even diving into the frontend with React. I've expanded my backend
+          game with Flask, Node.js, and integrated web sockets, REST, and
+          GraphQL APIs for seamless communication. I lead teams like a pro,
+          rocking Agile, microservices, Docker containerization, and
+          orchestrating containers with Kubernetes. My CI/CD pipelines with
+          Jenkins are tight, and I love bringing cloud-native solutions to life
+          on AWS, utilizing services like Lambda, EC2, S3, RDS, EKS, ECS and
+          more.
         </Left>
         <ProfileContainer>
           <ProfileImage src="/img/profile.jpg" alt="profile" />
@@ -132,7 +129,7 @@ const About = () => {
           </ContactList>
           <ContactList>
             <i className="pi pi-linkedin" style={{ fontSize: "1.0rem" }}></i>{" "}
-            https://linkedin.com/in/oluwaseun-johnson-850a433b{" "}
+            https://linkedin.com/in/waleola-johnson-850a433b{" "}
           </ContactList>
           <ContactList>
             <i className="pi pi-twitter" style={{ fontSize: "1.0rem" }}></i>{" "}
