@@ -292,7 +292,7 @@ export const ProjectData = [
     ],
     details:
       "This logistics module for an e-commerce platform is designed for seamless functionality and scalability using a microservice architecture. The frontend provides a modern, component-driven interface with a consistent UI/UX, enabling smooth user interaction. On the backend, secure authentication and authorization are ensured with JWT middleware, while Redis caching optimizes performance by reducing the database load during repeated token checks. The system supports three distinct roles—Picker, Team Lead, and Manager—each with specific permissions to ensure proper access control and task management. The API follows RESTful principles for structured communication between services. Comprehensive logging, reverse proxying through Nginx, and real-time monitoring using Prometheus with visual dashboards in Grafana further enhance reliability and performance, making this module a powerful solution for e-commerce logistics.",
-    link: "https://www.linkedin.com/feed/update/urn:li:activity:7236378025884336128/",
+    link: "https://www.linkedin.com/posts/waleola-johnson-850a433b_react-flask-typescript-activity-7243973419740889088-Az4d?utm_source=share&utm_medium=member_desktop",
     github: ["https://github.com/Shawen17/Logistics-service"],
     images: [
       "/projectimage/logistics2.png",
